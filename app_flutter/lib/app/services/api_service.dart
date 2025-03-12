@@ -4,7 +4,8 @@ import 'package:app_flutter/app/models/user_post_model.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  final String baseUrl = 'http://192.168.0.213:8000';
+  // EX: final String baseUrl = 'http://191.163.0.213:8000';
+  final String baseUrl = '';
 
   Future<List<UserModel>> fetchUsers() async {
     try {
