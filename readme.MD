@@ -48,7 +48,7 @@ http://localhost:8000/users
 http://localhost:8000/user-posts/${userId}
 
 📂 Estrutura do Projeto backend
-
+```
 backend/
 │-- node_modules/
 │-- src/
@@ -61,7 +61,7 @@ backend/
 │-- package.json
 │-- Dockerfile
 │-- .dockerignore
-
+```
 
 🚀 Como rodar o App Flutter
 
@@ -132,7 +132,7 @@ Antes de iniciar, certifique-se de ter os seguintes requisitos instalados:
 
 ## 📂 Estrutura do Projeto
 ```
-frontend-flutter/
+app_flutter/
 │-- lib/
 │   │-- app/
 │   │   │-- models/
