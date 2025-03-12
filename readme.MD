@@ -18,18 +18,23 @@ Acesse a pasta backend
 
 Crie a imagem Docker:
 
+```
 docker build -t backend-flutter-node .
+```
 
 Execute o container:
 
+```
 docker run -p 8000:8000 backend-flutter-node
+```
 
 Acesse o endpoint:
 Abra o navegador ou use o Postman para acessar:
 
+```
 http://localhost:8000/users
 http://localhost:8000/user-posts/${userId}
-
+```
 Isso irá retornar os dados consumidos da API pública.
 
 🔧 Passo a passo para rodar sem Docker:
@@ -40,12 +45,16 @@ npm install
 
 Execute o servidor:
 
+```
 npm start
+```
 
 Acesse o endpoint:
 
+```
 http://localhost:8000/users
 http://localhost:8000/user-posts/${userId}
+```
 
 📂 Estrutura do Projeto backend
 ```
