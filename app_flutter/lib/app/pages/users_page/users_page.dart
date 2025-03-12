@@ -1,4 +1,5 @@
 import 'package:app_flutter/app/models/user_model.dart';
+import 'package:app_flutter/app/pages/user_posts/user_posts.dart';
 import 'package:app_flutter/app/pages/users_page/widgets/user_card.dart';
 import 'package:app_flutter/app/services/api_service.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +55,16 @@ class _UsersPageState extends State<UsersPage> {
                   itemCount: users.length,
                   itemBuilder: (context, index) {
                     return UserCard(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push<void>(
+                          MaterialPageRoute<void>(
+                            builder: (BuildContext context) => UserPosts(
+                              userId: users[index].id,
+                              userName: users[index].name,
+                            ),
+                          ),
+                        );
+                      },
                       user: users[index],
                     );
                   },
