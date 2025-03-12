@@ -1,3 +1,4 @@
+import 'package:app_flutter/app/pages/users_page/users_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: Container());
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
+      home: const UsersPage(),
+    );
   }
 }
