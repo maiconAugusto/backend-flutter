@@ -2,6 +2,7 @@ import 'package:app_flutter/app/models/user_model.dart';
 import 'package:app_flutter/app/pages/user_posts/user_posts.dart';
 import 'package:app_flutter/app/pages/users_page/widgets/user_card.dart';
 import 'package:app_flutter/app/services/api_service.dart';
+import 'package:app_flutter/app/utils/snack.dart';
 import 'package:flutter/material.dart';
 
 class UsersPage extends StatefulWidget {
@@ -32,6 +33,10 @@ class _UsersPageState extends State<UsersPage> {
         users = usersResponse;
       });
     } catch (e) {
+      showError(
+        context: context,
+        message: 'Erro ao listar os usuários',
+      );
     } finally {
       setState(() {
         loading = false;
@@ -42,6 +47,18 @@ class _UsersPageState extends State<UsersPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.indigo,
+        centerTitle: true,
+        title: const Text(
+          "Usuários",
+          style: TextStyle(
+            fontSize: 16.0,
+            fontWeight: FontWeight.w800,
+            color: Colors.white,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -49,7 +66,9 @@ class _UsersPageState extends State<UsersPage> {
               child: Visibility(
                 visible: !loading,
                 replacement: const Center(
-                  child: CircularProgressIndicator(),
+                  child: CircularProgressIndicator(
+                    color: Colors.indigo,
+                  ),
                 ),
                 child: ListView.builder(
                   itemCount: users.length,

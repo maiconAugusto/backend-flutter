@@ -1,18 +1,18 @@
-class PostModel {
+class UserPostModel {
   final int userId;
   final int id;
   final String title;
   final String body;
 
-  PostModel({
+  UserPostModel({
     required this.userId,
     required this.id,
     required this.title,
     required this.body,
   });
 
-  factory PostModel.fromJson(Map<String, dynamic> json) {
-    return PostModel(
+  factory UserPostModel.fromJson(Map<String, dynamic> json) {
+    return UserPostModel(
       userId: json['userId'],
       id: json['id'],
       title: json['title'],
