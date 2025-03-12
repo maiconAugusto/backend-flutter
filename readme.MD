@@ -1,6 +1,9 @@
-Backend - Flutter
+# Backend
+
+## 🚀 Como rodar o projeto backend
 
 Este é o backend do teste técnico, desenvolvido com Node.js e Express.js, que consome uma API pública e expõe os dados via um endpoint REST.
+
 
 🚀 Como rodar o backend com Docker
 
@@ -71,14 +74,6 @@ backend/
 │-- Dockerfile
 │-- .dockerignore
 ```
-
-🚀 Como rodar o App Flutter
-
-
-Acesse app_flutter
-
-Selecione um emulador
-
 
 📌 Tecnologias Utilizadas
 
